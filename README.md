@@ -1,6 +1,7 @@
 # Online Judge Platform
 
 **Live Demo:**
+http://localhost:5173
 
 ## Description
 This is a full-stack online code execution and judging platform, inspired by platforms like LeetCode. It allows users to read problem descriptions, write code in an integrated browser editor, and submit their solutions. The backend securely compiles and executes the code against predefined hidden test cases and returns the evaluation status (e.g., Accepted, Wrong Answer, Execution Error).
