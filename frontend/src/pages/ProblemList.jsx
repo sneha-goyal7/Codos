@@ -9,7 +9,7 @@ export default function ProblemList() {
     const fetchProblems = async () => {
       try {
         const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/problems`);
-        setProblems(response.data.problems);
+        setProblems(Array.isArray(response.data) ? response.data : response.data.problems || []);
       } catch (error) {
         console.error("Error fetching problems:", error);
       }

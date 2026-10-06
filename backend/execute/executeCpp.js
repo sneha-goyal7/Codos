@@ -14,7 +14,7 @@ const executeCpp = (filepath, inputPath) => { // <-- ADDED inputPath
 
     return new Promise((resolve, reject) => {
         // Compile the code, AND THEN run it while feeding the input file
-        const command = `g++ ${filepath} -o ${outPath} && ${outPath} < ${inputPath}`;
+       const command = `g++ "${filepath}" -o "${outPath}" && "${outPath}" < "${inputPath}"`;
         
         exec(command, (error, stdout, stderr) => {
             if (error) {
